@@ -1,0 +1,5 @@
+baseurl: http://localhost
+
+name: Blog Name
+description: Blog Description
+githuburl: https://github.com/bgdimitrov88/Blog

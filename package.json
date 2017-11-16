@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-param": "^1.0.3",
+    "handlebars": "^4.0.11",
+    "marked": "^0.3.6",
+    "run-sequence": "^2.2.0",
+    "tiny-ssg": "github:ColinEberhardt/tiny-ssg#v0.0.6"
+  }
+}
