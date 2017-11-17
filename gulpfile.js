@@ -17,14 +17,14 @@ gulp.task('clean', function() {
 
 // Compiles and minifies main.less and copies it to the build folder
 gulp.task('less', function() {
-  return gulp.src(['**/main.less'], {base: './less/shared'})
+  return gulp.src(['**/main.less'], {base: './less'})
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest(buildFolder + '/styles'));
 });
 
 gulp.task('copy-js', function() {
-  return gulp.src(['**/transition.js', '**/collapse.js'], {base: './node_modules/bootstrap/js'})
+  return gulp.src(['scripts/**/*.js'])
     .pipe(gulp.dest(buildFolder + '/scripts'));
 });
 
