@@ -30,7 +30,7 @@ gulp.task('copy-js', function() {
 
 // Copies resources to the build folder
 gulp.task('copy', ['copy-js'], function() {
-  return gulp.src(['assets/**', 'frameworks/**/*.png', 'scripts/**/*.js', 'CNAME', 'favicon.ico'], {base: '.'})
+  return gulp.src(['assets/**', 'favicon.ico'], {base: '.'})
     .pipe(gulp.dest(buildFolder));
 });
 
@@ -38,7 +38,7 @@ gulp.task('copy', ['copy-js'], function() {
 gulp.task('tinyssg', function() {
   const config = {
       includesPattern: ['_includes/**/*.*'],
-      filePattern: ['index.html', 'frameworks/**/*.md'],
+      filePattern: ['index.html', 'categories/**/*.md'],
       globalPattern: ['site.yml'],
       globalData: {site: {baseurl: 'http://localhost:8080'}}
     };
@@ -49,7 +49,7 @@ gulp.task('tinyssg', function() {
 gulp.task('tinyssg-production', function() {
   const config = {
       includesPattern: ['_includes/**/*.*'],
-      filePattern: ['index.html', 'frameworks/**/*.md'],
+      filePattern: ['index.html', 'categories/**/*.md'],
       globalPattern: ['site.yml']
     };
   return tinySSG.build(config);
@@ -77,7 +77,7 @@ gulp.task('watch', function(cb) {
   gulp.watch([
     '_includes/**/*.*',
     '_layouts/**/*.*',
-    'frameworks/**/*.*', 
+    'posts/**/*.*', 
     'index.html'], function() {
       runSequence('tinyssg', 'htmlmin', 'reload-site');
     });

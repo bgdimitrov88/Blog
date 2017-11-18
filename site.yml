@@ -1,4 +1,4 @@
-baseurl: http://localhost
+baseurl: http://localhost:8080
 
 name: Blog Name
 description: Blog Description
